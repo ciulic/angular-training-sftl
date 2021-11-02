@@ -1,0 +1,33 @@
+<p [ngClass]="introMessageClasses">
+  {{introMessage}}
+</p>
+<p class="font-weight-bold">
+  Binding to an attribute
+</p>
+<pre>
+  <span [attr.data-test-id]="hasDataTestId">Element - inspect element to verify the attribute</span>
+</pre>
+<p class="font-weight-bold">
+  Binding ARIA attributes
+</p>
+<pre>
+  <button [attr.aria-label]="ariaLabel">{{ariaLabel}} with Aria</button>
+</pre>
+<p class="font-weight-bold">
+  Binding to multiple CSS classes
+</p>
+<pre>
+  <span [class.content]="hasContent">Element with only classname</span>
+</pre>
+<pre>
+  <span [class]="contentClasses">Element with multiple classes</span>
+</pre>
+<p class="font-weight-bold">
+  Binding to the style attribute
+</p>
+<pre>
+  <span [style.backgroundColor]="backgroundColor">Element with one style</span>
+</pre>
+<pre>
+  <span [style]="styles">Element with multiple styles</span>
+</pre>

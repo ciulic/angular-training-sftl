@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; font-size: 62.5%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul.secondary-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  column-gap: 3px;
+}
+
+ul.secondary-nav li a {
+  border: 1px solid blue;
+  margin: 5px;
+  padding: 2px;
+}
+

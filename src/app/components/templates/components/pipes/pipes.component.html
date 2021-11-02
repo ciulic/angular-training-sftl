@@ -1,0 +1,46 @@
+<p [ngClass]="introMessageClasses">
+  Use pipes to transform strings, currency amounts, dates, and other data for display. Pipes are simple functions to use in template expressions to accept an input value and return a transformed value.
+</p>
+<p class="font-weight-bold">
+  DatePipe: Formats a date value according to locale rules.
+</p>
+<pre>
+  {{datePipe | date:'MMM d, y, h:mm:ss a'}}
+  {{datePipe | date:'EEEE, MMMM d, y'}}
+  {{datePipe | date:'h:mm:ss a zzzz'}}
+</pre>
+<p class="font-weight-bold">
+  UpperCasePipe: Transforms text to all upper case.
+</p>
+<pre>
+  {{upperCasePipe | uppercase}}
+</pre>
+<p class="font-weight-bold">
+  LowerCasePipe: Transforms text to all lower case.
+</p>
+<pre>
+  {{lowerCasePipe | lowercase}}
+</pre>
+<p class="font-weight-bold">
+  CurrencyPipe: Transforms a number to a currency string, formatted according to locale rules.
+</p>
+<pre>
+  {{pricePipe | currency:'EUR'}}
+  {{pricePipe | currency:'USD'}}
+</pre>
+<p class="font-weight-bold">
+  DecimalPipe: Transforms a number into a string with a decimal point, formatted according to locale rules.
+</p>
+<pre>
+  {{decimalPipe|number}}
+  {{decimalPipe|number:'1.0-4'}}
+  {{decimalPipe|number:'2.0-5'}}
+  {{decimalPipe|number:'3.1-5'}}
+</pre>
+<p class="font-weight-bold">
+  PercentPipe: Transforms a number to a percentage string, formatted according to locale rules.
+</p>
+<pre>
+  {{percentPipe1|percent}}
+  {{percentPipe2|percent}}
+</pre>

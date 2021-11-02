@@ -1,0 +1,16 @@
+<p [ngClass]="introMessageClasses">
+  {{introMessage}}
+</p>
+<p>
+  {{publicVariable}}
+</p>
+
+<p>
+  {{anotherVariable}}
+</p>
+
+<p class="font-weight-bold">
+  Resolving expressions with interpolation
+</p>
+<p>The sum of 1 + 1 is {{1 + 1}}.</p>
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>

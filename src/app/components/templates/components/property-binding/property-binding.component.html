@@ -1,0 +1,13 @@
+<p [ngClass]="introMessageClasses">
+  {{introMessage}}
+</p>
+<p>
+  <button [class]="myClasses" [disabled]="isDisabled">Click me</button>
+</p>
+<p>
+  <app-child [childProp]="parentProp"></app-child>
+</p>
+<p>
+  {{evilTitle}}
+</p>
+<p>"<span [innerHTML]="evilTitle2"></span>" is the <i>property bound</i> evil title 2.
