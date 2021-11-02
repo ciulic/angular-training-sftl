@@ -7,6 +7,10 @@ import { PropertyBindingComponent} from "./components/templates/components/prope
 import { BindingsComponent } from "./components/templates/components/bindings/bindings.component";
 import { HomeComponent } from "./components/home/home.component";
 import {TemplatesComponent} from "./components/templates/templates.component";
+import {DirectivesComponent} from "./components/directives/directives.component";
+import {BuiltInComponent} from "./components/directives/components/built-in/built-in.component";
+import {AttributeComponent} from "./components/directives/components/attribute/attribute.component";
+import {StructuralComponent} from "./components/directives/components/structural/structural.component";
 
 const routes: Routes = [{
   path: '',
@@ -29,6 +33,19 @@ const routes: Routes = [{
   }, {
     path: 'bindings',
     component: BindingsComponent
+  }]
+}, {
+  path: 'directives',
+  component: DirectivesComponent,
+  children: [{
+    path: 'built-in',
+    component: BuiltInComponent
+  }, {
+    path: 'attribute',
+    component: AttributeComponent
+  }, {
+    path: 'structural',
+    component: StructuralComponent
   }]
 }];
 

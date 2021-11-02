@@ -15,9 +15,3 @@ ul.secondary-nav {
   column-gap: 3px;
 }
 
-ul.secondary-nav li a {
-  border: 1px solid blue;
-  margin: 5px;
-  padding: 2px;
-}
-

@@ -16,6 +16,10 @@ import { HomeComponent } from './components/home/home.component';
 import { TemplatesComponent } from './components/templates/templates.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './components/templates/components/child/child.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { BuiltInComponent } from './components/directives/components/built-in/built-in.component';
+import { AttributeComponent } from './components/directives/components/attribute/attribute.component';
+import { StructuralComponent } from './components/directives/components/structural/structural.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ChildComponent } from './components/templates/components/child/child.co
     BindingsComponent,
     HomeComponent,
     TemplatesComponent,
-    ChildComponent
+    ChildComponent,
+    DirectivesComponent,
+    BuiltInComponent,
+    AttributeComponent,
+    StructuralComponent
   ],
   imports: [
     BrowserModule,
