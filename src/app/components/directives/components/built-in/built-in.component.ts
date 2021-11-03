@@ -15,6 +15,30 @@ export class BuiltInComponent implements OnInit {
   multipleClasses: Record<string, boolean> = {};
   multipleStyles: Record<string, string> = {};
 
+  currentItem: Record<string, string> = {
+    name: ''
+  };
+
+  currentCustomer: string = 'customer name is available';
+  emptyCurrentCustomer: string = '';
+
+  nextId = 3;
+  items = [{
+    id: 1,
+    name: 'item1',
+    value: new Date(),
+  },{
+    id: 2,
+    name: 'item2',
+    value: new Date(),
+  }, {
+    id: 3,
+    name: 'item3',
+    value: new Date()
+  }];
+
+  feature: string = 'case1';
+
   constructor(public introMessageClassesService: IntroMessageClassesService) {
     this.introMessageClasses = introMessageClassesService.introMessageClasses;
   }
@@ -37,5 +61,36 @@ export class BuiltInComponent implements OnInit {
       'font-weight': true ? 'bold' : 'normal',
       'color': true ? 'orange' : 'black',
     };
+  }
+
+  trackByItems(index: number, item: any) {
+    return item.id;
+  }
+
+  onAddItem() {
+    this.nextId = this.nextId + 1;
+    const item = {
+      id: this.nextId,
+      name: 'item3',
+      value: new Date(),
+    };
+    this.items.push(item);
+  }
+
+  onUpdateItem(itemId: number) {
+    const itemIndex = this.items.findIndex(({ id }) => id === itemId);
+    if (itemIndex >= 0) {
+      this.items[itemIndex].value = new Date();
+    }
+  }
+
+  onChangeItems() {
+    const lastItem = this.items[this.items.length -1 ];
+    this.items = [{
+      id: 1,
+      name: 'new item',
+      value: new Date(),
+    }];
+    this.items.push(lastItem);
   }
 }

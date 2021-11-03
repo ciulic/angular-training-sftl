@@ -1,1 +1,7 @@
-<p>attribute works!</p>
+<p [ngClass]="introMessageClasses">
+  {{introMessage}}
+</p>
+<pre>
+  <span [appHighlight]="color1" defaultColor="green">This is my element with directive, color {{color1}}</span>
+  <span [appHighlight]="color2" defaultColor="blue">This is my element with directive, color {{color2}}</span>
+</pre>

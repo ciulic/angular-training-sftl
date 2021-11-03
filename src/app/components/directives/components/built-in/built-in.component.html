@@ -18,5 +18,30 @@
   NgModel—adds two-way data binding to an HTML form element.
 </p>
 <pre>
-
+  <label for="example-ngModel">[(ngModel)]:</label>
+  <input [(ngModel)]="currentItem.name" id="example-ngModel">
+  <span>{{currentItem.name}}</span>
+</pre>
+<p class="font-weight-bold">NgIf—conditionally creates or disposes of subviews from the template.</p>
+<pre>
+  <span *ngIf="currentCustomer">Hello, {{currentCustomer}}</span>
+  <span *ngIf="emptyCurrentCustomer">Hello, {{emptyCurrentCustomer}}</span>
+</pre>
+<p class="font-weight-bold">NgFor—repeat a node for each item in a list.</p>
+<pre>
+  <span class="d-flex">
+    <button (click)="onAddItem()">Add item</button>
+    <button (click)="onUpdateItem(1)">Update item</button>
+    <button (click)="onChangeItems()">Change items</button>
+  </span>
+  <span class="d-flex" *ngFor="let item of items; trackBy: trackByItems">
+    {{item.id}}: {{item.name}} - {{item.value}}
+  </span>
+</pre>
+<p class="font-weight-bold">NgSwitch—a set of directives that switch among alternative views.</p>
+<pre [ngSwitch]="feature">
+  <span *ngSwitchCase="'case1'">case1</span>
+  <span *ngSwitchCase="'case2'">case2</span>
+  <span *ngSwitchCase="'case3'">case3</span>
+  <span *ngSwitchDefault>default case</span>
 </pre>

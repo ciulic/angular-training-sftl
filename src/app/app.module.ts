@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,12 +16,13 @@ import { PropertyBindingComponent } from './components/templates/components/prop
 import { BindingsComponent } from './components/templates/components/bindings/bindings.component';
 import { HomeComponent } from './components/home/home.component';
 import { TemplatesComponent } from './components/templates/templates.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './components/templates/components/child/child.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { BuiltInComponent } from './components/directives/components/built-in/built-in.component';
 import { AttributeComponent } from './components/directives/components/attribute/attribute.component';
 import { StructuralComponent } from './components/directives/components/structural/structural.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { StructuralComponent } from './components/directives/components/structur
     DirectivesComponent,
     BuiltInComponent,
     AttributeComponent,
-    StructuralComponent
+    StructuralComponent,
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { StructuralComponent } from './components/directives/components/structur
       registrationStrategy: 'registerWhenStable:30000'
     }),
     NoopAnimationsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
