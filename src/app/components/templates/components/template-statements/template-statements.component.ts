@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IntroMessageClassesService } from "../../../../intro-message-classes.service";
+import { LogService } from "../../../../log.service";
 
 @Component({
   selector: 'app-template-statements',
@@ -12,11 +13,13 @@ export class TemplateStatementsComponent implements OnInit {
   clickedNr = 0;
   introMessageClasses = '';
 
-  constructor(public introMessageClassesService: IntroMessageClassesService) {
+  constructor(public introMessageClassesService: IntroMessageClassesService, public logService: LogService) {
     this.introMessageClasses = introMessageClassesService.introMessageClasses;
   }
 
   ngOnInit(): void {
+    this.logService.serviceLocation = 'component.providers';
+    this.logService.say('TemplateStatementsComponent');
   }
 
   onClick() {

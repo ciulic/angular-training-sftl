@@ -23,6 +23,7 @@ import { AttributeComponent } from './components/directives/components/attribute
 import { StructuralComponent } from './components/directives/components/structural/structural.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { LogService } from "./log.service";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { UnlessDirective } from './directives/unless.directive';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
